@@ -63,8 +63,8 @@ Alimentos para traduzir:
     
     try:
         client = openai.OpenAI(
-            api_key="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",
-            organization="org-qWlrlvk9nDmo3OglC0VwZQxo"
+            api_key=os.getenv('OPENAI_API_KEY'),
+            organization=os.getenv('OPENAI_ORGANIZATION')
         )
         
         response = client.chat.completions.create(
